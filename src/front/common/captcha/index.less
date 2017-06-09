@@ -1,0 +1,39 @@
+.captcha {
+  @fz: 375/10rem;
+  width: 355/@fz;
+  margin: 10/@fz auto;
+  position: relative;
+  font-size: 14/@fz;
+  .input-wrap {
+    padding-right: 15/@fz;
+  }
+  .code-img {
+    vertical-align: middle;
+	width: 93/@fz;
+    height: 30/@fz;
+    border: 1px solid #ccc;
+    display: inline-block;
+  }
+  .validate-msg {
+    display: none;
+    width: 18/@fz;
+    height: 18/@fz;
+    line-height: 18/@fz;
+    text-align: center;
+    font-size: 14/@fz;
+    position: absolute;
+    top: 8/@fz;
+    left: 202/@fz;
+    &.invalid {
+      display: inline-block;
+      border-radius: 50%;
+      font-weight: bold;
+      color: #fff;
+      background: #ec0505;
+    }
+    &.valid {
+      display: inline-block;
+      color: #00c09b;
+    }
+  }
+}

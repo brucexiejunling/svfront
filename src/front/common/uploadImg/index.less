@@ -1,0 +1,74 @@
+.upload-img {
+  @fz: 375/10rem;
+  font-size: 14/@fz;
+  width: 335/@fz;
+  margin: auto;
+  padding: 10/@fz 0;
+  .label {
+	height: 35/@fz;
+	font-size: 16/@fz;
+	span {
+	  display: inline-block;
+	  width: 10/@fz;
+	  height: 10/@fz;
+	  line-height: 16/@fz;
+	  text-align: right;
+	  color: #c40000;
+	  font-size: 16/@fz;
+	  vertical-align: middle;
+	}
+  }
+  .uploader {
+	width: 295/@fz;
+	margin: auto;
+	&:after {
+	  clear: both;
+	  display: block;
+	  content: ' ';
+	  overflow: hidden;
+	  height: 0;
+	}
+	> div {
+	  float: left;
+	}
+	.image {
+	  width: 82/@fz;
+	  height: 82/@fz;
+	  float: left;
+	  margin-right: 10/@fz;
+	  margin-bottom: 10/@fz;
+	  position: relative;
+	  border: solid 1px #ddd;
+	  img {
+		width: 100%;
+		max-height: 100%;
+	  }
+	  .delete-btn {
+		position: absolute;
+		top: -5/@fz;
+		right: -5/@fz;
+		width: 20/@fz;
+		height: 20/@fz;
+		line-height: 20/@fz;
+		background: #bbb;
+		color: #fff;
+		border-radius: 50%;
+		text-align: center;
+	  }
+	}
+  }
+  .upload-btn {
+	box-sizing: border-box;
+	display: block;
+	outline: none;
+	width: 82/@fz;
+	height: 82/@fz;
+	line-height: 80/@fz;
+	background: #fff;
+	border: solid 1px #6ce4c7;
+	background: url('/icons/Plus1.png');
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: center center;
+  }
+}

@@ -1,0 +1,72 @@
+.textarea {
+  @fz: 375/10rem;
+  width: 100%;
+  text-align: center;
+  padding: 10/@fz;
+  //padding-bottom: 20/@fz;
+  margin: auto;
+  font-size: 14/@fz;
+  box-sizing: border-box;
+  label {
+	font-size: 14/@fz;
+	width: 285/@fz;
+	height: 35/@fz;
+	line-height: 35/@fz;
+	display: inline-block;
+	vertical-align: middle;
+	text-align: left;
+	span {
+	  display: inline-block;
+	  width: 10/@fz;
+	  height: 10/@fz;
+	  line-height: 14/@fz;
+	  text-align: right;
+	  color: #c40000;
+	  font-size: 14/@fz;
+	  vertical-align: middle;
+	}
+  }
+  .textarea-wrap {
+	position: relative;
+	textarea {
+	  width: 285/@fz;
+	  height: 60/@fz;
+	  resize: none;
+	  &.normal {
+		height: 60/@fz;
+	  }
+	  &.large {
+		height: 150/@fz;
+	  }
+	  vertical-align: middle;
+	  padding: 2/@fz 10/@fz;
+	  font-size: 14/@fz;
+	  box-sizing: border-box;
+	  border: solid 1px #999;
+	  border-radius: 4/@fz;
+	  box-shadow: -1/@fz -2/@fz 4/@fz #eee inset;
+	  outline: none;
+	}
+	.validate-msg {
+	  display: none;
+	  width: 18/@fz;
+	  height: 18/@fz;
+	  line-height: 18/@fz;
+	  font-size: 14/@fz;
+	  position: absolute;
+	  top: 0;
+	  right: -25/@fz;
+	  &.invalid {
+		display: inline-block;
+		border-radius: 50%;
+		font-weight: bold;
+		color: #fff;
+		background: #ec0505;
+	  }
+	  &.valid {
+		display: inline-block;
+		color: #00c09b;
+	  }
+	}
+  }
+}

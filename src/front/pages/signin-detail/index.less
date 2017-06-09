@@ -1,0 +1,50 @@
+@import "../../common/normalize.less";
+.wrap {
+  @fz: 375/10rem;
+  padding-bottom: 20/@fz;
+  color: #444;
+  .nodata-tips {
+    box-sizing: border-box;
+    font-size: 14/@fz;
+    padding: 30/@fz;
+    text-align: center;
+  }
+  .main {
+    .top {
+      font-size: 16/@fz;
+      padding: 20/@fz;
+      text-align: center;
+      .department {
+        color: #289dfb;
+        margin-bottom: 20/@fz;
+      }
+      span {
+        margin-right: 20/@fz;
+      }
+    }
+    .list {
+      .item {
+        border-bottom: solid 1px #eee;
+        font-size: 12/@fz;
+        &.head {
+          background: #6ce4c7;
+        }
+        display: flex;
+        > div {
+          text-align: center;
+          border-right: solid 1px #eee;
+          padding: 10/@fz 0;
+        }
+        .name {
+          width: 100/@fz;
+        }
+        .time {
+          width: 120/@fz;
+        }
+        .location {
+          width: 200/@fz;
+        }
+      }
+    }
+  }
+}

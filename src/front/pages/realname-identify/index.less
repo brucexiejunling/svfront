@@ -1,0 +1,70 @@
+@import "../../common/normalize.less";
+.wrap {
+  @fz: 375/10rem;
+  font-size: 16/@fz;
+  padding-bottom: 20/@fz;
+  width: 100%;
+  overflow-x: hidden;
+  color: #444;
+  .form {
+	position: relative;
+	margin-top: 30/@fz;
+	label {
+	  font-size: 14/@fz!important;
+	}
+	.row {
+	  @fz: 375/10rem;
+	  width: 100%;
+	  text-align: center;
+	  font-size: 14/@fz;
+	  > label {
+		font-size: 16/@fz;
+		width: 90/@fz;
+		height: 35/@fz;
+		line-height: 35/@fz;
+		display: inline-block;
+		vertical-align: middle;
+		text-align: right;
+		span {
+		  display: inline-block;
+		  width: 10/@fz;
+		  height: 10/@fz;
+		  line-height: 16/@fz;
+		  color: #c40000;
+		  font-size: 16/@fz;
+		  vertical-align: middle;
+		}
+	  }
+	  .radio-wrap {
+		display: inline-block;
+		width: 220/@fz;
+		padding-right: 25/@fz;
+		text-align: left;
+		.radio {
+		  position: relative;
+		  margin-right: 20/@fz;
+		  input {
+			vertical-align: middle;
+			margin-left: 5/@fz;
+		  }
+		}
+	  }
+	}
+	.submit-btn {
+	  width: 290/@fz;
+	  height: 40/@fz;
+	  font-size: 20/@fz;
+	  display: block;
+	  margin: auto;
+	  margin-top: 40/@fz;
+	  border: none;
+	  outline: none;
+	  color: #fff;
+	  background: #00c09b;
+	}
+  }
+  .submit-success {
+	margin-top: 200/@fz;
+	text-align: center;
+  }
+}

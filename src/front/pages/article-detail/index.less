@@ -1,0 +1,129 @@
+@import "../../common/normalize.less";
+.wrap {
+  @fz: 375/10rem;
+  font-size: 16/@fz;
+  padding-bottom: 20/@fz;
+  color: #444;
+  .main {
+    box-sizing: border-box;
+    .detail {
+      padding: 20/@fz 12/@fz;
+    }
+    .title {
+      font-size: 20/@fz;
+      //font-weight: bold;
+      text-align: center;
+      //m1argin: 0/@fz 0 15/@fz 0;
+      margin-bottom: 15/@fz;
+      color: #444;
+    }
+    .keywords {
+      .keyword {
+        margin-right: 5/@fz;
+        background: #eee;
+        color: #999;
+        padding: 5/@fz 10/@fz;
+        border-radius: 15/@fz;
+        font-size: 13/@fz;
+      }
+    }
+    .date {
+      float: right;
+      margin-top: -16/@fz;
+      color: #999;
+    }
+    .content {
+      overflow-x: hidden;
+      width: 100%;
+      margin-top: 10/@fz;
+      color: #666;
+      video, audio, iframe {
+        width: 100%;
+      }
+      img {
+        max-width: 100%!important;
+        margin: auto;
+      }
+    }
+    .author-info {
+        font-size: 12/@fz;
+        color: #999;
+        margin-top: 50/@fz;
+        border-top: solid 1px #eee;
+        padding: 10/@fz 0;
+        border-bottom: solid 1px #eee;
+        > div {
+          margin-bottom: 10px;
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+    }
+  }
+  .comment-part {
+    margin-top: 50/@fz;
+    .comment-input {
+      &:after {
+        clear: both;
+        display: block;
+        content: ' ';
+        overflow: hidden;
+        height: 0;
+      }
+    }
+    .comment-btn {
+      width: 70/@fz;
+      height: 30/@fz;
+      background: #00c09b;
+      color: #fff;
+      line-height: 30/@fz;
+      text-align: center;
+      float: right;
+      margin-right: 45/@fz;
+      border-radius: 4/@fz;
+    }
+    .comment-list {
+      border-top: solid 1px #eee;
+      margin-top: 40/@fz;
+      &:after {
+        clear: both;
+        display: block;
+        content: ' ';
+        overflow: hidden;
+        height: 0;
+      }
+      .item {
+        border-bottom: solid 1px #eee;
+        padding: 12/@fz 20/@fz;
+        font-size: 14/@fz;
+        &:last-child {
+          border-bottom: none;
+        }
+        .name {
+          float: left;
+          display: inline-block;
+          width: 50/@fz;
+          height: 50/@fz;
+          line-height: 50/@fz;
+          border-radius: 50%;
+          background: #00c09b;
+          text-align: center;
+          color: #fff;
+          margin-right: 12/@fz;
+          font-size: 12/@fz;
+        }
+        .content {
+          color: #666;
+          float: left;
+          width: 270/@fz;
+          margin: 15/@fz 0;
+        }
+        .time {
+          text-align: right;
+          font-size: 12/@fz;
+          color: #999;
+        }
+      }
+    }
+  }
+}

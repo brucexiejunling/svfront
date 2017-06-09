@@ -1,0 +1,58 @@
+@import "../../common/normalize.less";
+.wrap {
+  @fz: 375/10rem;
+  .main {
+    padding: 20/@fz;
+    color: #666;
+    .display-wrap {
+      font-size: 14/@fz;
+      line-height: 20/@fz;
+      margin-bottom: 20/@fz;
+      > div {
+        margin-bottom: 15/@fz;
+      }
+      > .child > div {
+        margin-bottom: 15/@fz;
+      }
+      .label {
+        color: #999;
+        background: #eee;
+        padding: 2px 5px;
+        border-radius: 10/@fz;
+        margin-right: 12/@fz;
+        font-size: 12/@fz;
+      }
+      .imgs-wrap {
+        margin-top: 10/@fz; 
+        img {
+          max-width: 100%;
+          display: block;
+          margin-bottom: 10/@fz;
+        }
+      }
+    }
+    .deal-wrap {
+      border-top: solid 1px #00c09b;
+      padding-top: 20/@fz;
+      label, .label {
+        color: #00c09b!important;
+        font-size: 14/@fz!important;
+      }
+      .submit {
+        button {
+          width: 290/@fz;
+          height: 40/@fz;
+          display: block;
+          margin: auto;
+          margin-top: 40/@fz;
+          border: none;
+          outline: none;
+          color: #fff;
+          background: #00c09b;
+          font-size: 20/@fz;
+        }
+      }
+
+    }
+  }
+}

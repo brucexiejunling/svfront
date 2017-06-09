@@ -1,0 +1,111 @@
+@import "../../common/normalize.less";
+.wrap {
+  @fz: 375/10rem;
+  padding-bottom: 20/@fz;
+  color: #444;
+  .list {
+    padding: 10/@fz 12.5/@fz;
+    box-sizing: border-box;
+    .card {
+      background: #fff;
+      width: 100%;
+      border: solid 1px #eee;
+      border-radius: 4/@fz;
+      margin-bottom: 10/@fz;
+      box-shadow: 1px 2/@fz 6/@fz #eee;
+      a {
+        color: #444;
+        .signin {
+          border-bottom: solid 1px #eee;
+          margin-bottom: 10/@fz;
+        }
+        .signout {
+          margin-bottom: 10/@fz;
+        }
+        .date {
+          font-size: 20/@fz!important;
+          padding: 10/@fz!important;
+          color: #444!important;
+          text-align: left!important;
+          margin-bottom: 0!important;
+        }
+        .time {
+          font-size: 16/@fz;
+          padding: 0 10/@fz;
+          color: #289dfb;
+        }
+        .count {
+          font-size: 14/@fz;
+          padding: 10/@fz;
+          color: #666;
+          display: inline-block;
+          &.red {
+            color: #ff0036;
+          }
+        }
+        .foot {
+          font-size: 13/@fz;
+          padding: 10/@fz;
+          padding-top: 0;
+          .total {
+            color: #289dfb;
+          }
+          .all {
+            float: right;
+            color: #999;
+            line-height: 12/@fz;
+            vertical-align: bottom;
+            margin-right: 25/@fz;
+          }
+        }
+      }
+    }
+  }
+  .nodata-tips {
+    box-sizing: border-box;
+    font-size: 14/@fz;
+    padding: 30/@fz;
+    text-align: center;
+  }
+  .signin {
+    .title {
+      font-size: 16/@fz;
+      padding: 20/@fz;
+      .date {
+        font-size: 25/@fz;
+        color: #289dfb;
+      }
+      border-bottom: solid 1px #999;
+    }
+    .in, .out {
+      text-align: center;
+      padding: 80/@fz 0;
+      .group {
+        font-size: 16/@fz;
+        margin-bottom: 20/@fz;
+        padding-left: 20/@fz;
+        text-align: left;
+        > div {
+          margin-bottom: 10/@fz;
+        }
+      }
+      button {
+        background: #289dfb;
+        color: #fff;
+        border: none;
+        outline: none;
+        font-size: 20/@fz;
+        padding: 10/@fz 50/@fz;
+        &.disabled {
+          background: #ddd;
+        }
+      }
+    }
+    .in  {
+      border-bottom: solid 1px #999;
+    }
+    .out {
+
+    }
+  }
+}

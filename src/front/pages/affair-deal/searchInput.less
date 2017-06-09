@@ -1,0 +1,62 @@
+.search-input {
+  @fz: 375/10rem;
+  position: relative;
+  box-sizing: border-box;
+  font-size: 14/@fz;
+  margin: 12/@fz auto 8/@fz auto;
+  width: 340/@fz;
+  height: 44/@fz;
+  padding: 7/@fz 0 0 10/@fz;
+  border-radius: 4/@fz;
+  box-shadow: 0px 1px 4px #eee;
+  border: solid 1px #6ce4c7;
+  input {
+	width: 280/@fz;
+	height: 30/@fz;
+	padding: 5/@fz 15/@fz;
+	box-sizing: border-box;
+	border: solid 1px #eee;
+	outline: none;
+	border-radius: 20/@fz;
+    box-shadow: 1px 1px 10/@fz #eee inset;
+	font-size: 14/@fz;
+	color: #999;
+  }
+  button {
+    background: none;
+    border: none;
+    outline: none;
+  }
+  .delete {
+    display: block;
+    position: absolute;
+    top: 12/@fz;
+    right: 60/@fz;
+    width: 18/@fz;
+    height: 18/@fz;
+    padding: 0;
+    color: #fff;
+    background: #e0e6e7;
+    line-height: 18/@fz;
+    font-weight: bold;
+    font-size: 14/@fz;
+    text-align: center;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    &.hidden {
+      display: none;
+    }
+  }
+  .search {
+    width: 30/@fz;
+    height: 30/@fz;
+    vertical-align: middle;
+    margin-left: 10/@fz;
+    background-image: data-uri('/icons/Magnifying1.png');
+    background-size: 35/@fz;
+    background-position: center center;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+  }
+}

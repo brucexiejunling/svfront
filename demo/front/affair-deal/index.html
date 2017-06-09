@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <style>
+        .css-loading {
+            position: absolute;
+            top: 50%;
+            left: 40%;
+            margin-left: 10%;
+            transform: translate3d(-50%, -50%, 0);
+        }
+        .css-loading .css-dot {
+            width: 10px;
+            height: 10px;
+            background: #3ac;
+            border-radius: 100%;
+            display: inline-block;
+            margin-right: 5px;
+            animation: slide 1s infinite;
+            -webkit-animation: slide 1s infinite;
+            -o-animation: slide 1s infinite;
+            -moz-animation: slide 1s infinite;
+        }
+        .css-loading .css-dot:nth-child(1) {
+            animation-delay: 0.1s;
+            -webkit-animation-delay: 0.1s;
+            -moz-animation-delay: 0.1s;
+            background: #32aacc;
+        }
+        .css-loading .css-dot:nth-child(2) {
+            animation-delay: 0.1s;
+            -webkit-animation-delay: 0.2s;
+            background: #64aacc;
+        }
+        .css-loading .css-dot:nth-child(3) {
+            animation-delay: 0.3s;
+            -webkit-animation-delay: 0.3s;
+            background: #96aacc;
+        }
+        .css-loading .css-dot:nth-child(4) {
+            animation-delay: 0.4s;
+            background: #c8aacc;
+        }
+        .css-loading .css-dot:nth-child(5) {
+            animation-delay: 0.5s;
+            background: #faaacc;
+        }
+        @-moz-keyframes slide {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                opacity: 0.3;
+                transform: scale(2);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        @-webkit-keyframes slide {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                opacity: 0.3;
+                transform: scale(2);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        @-o-keyframes slide {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                opacity: 0.3;
+                transform: scale(2);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        @keyframes slide {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                opacity: 0.3;
+                transform: scale(2);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+<div id="page_holder">
+    <div class="css-loading">
+        <div class="css-dot"></div>
+        <div class="css-dot"></div>
+        <div class="css-dot"></div>
+    </div>
+</div>
+<script src="//cdn.bootcss.com/react/15.3.2/react.min.js"></script>
+<script src="//cdn.bootcss.com/react/15.3.2/react-dom.min.js"></script>
+<script src="front-affair_deal.js"></script>
+</body>
+</html>

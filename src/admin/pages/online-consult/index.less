@@ -1,0 +1,143 @@
+.wrap {
+  min-height: 700px;
+  border: solid 1px #eee;
+  box-shadow: 1px 4px 10px #eee;
+
+    table {
+      font-size: 13px;
+    }
+  .banner-wrap, .rule-wrap, .law-wrap, .consult-wrap {
+	display: none;
+	padding: 50px;
+	.title {
+	  font-size: 18px;
+	  margin-bottom: 20px;
+	}
+	.add-btn {
+	  margin-bottom: 20px;
+	  a {
+		color: #fff;
+	  }
+	}
+	.pagination {
+	  text-align: center;
+	}
+  }
+  .banner-wrap {
+	&.active {
+	  display: block;
+	}
+	.title {
+	  font-size: 18px;
+	}
+	.main {
+	  padding: 20px;
+	  button {
+		margin-right: 30px;
+	  }
+	  .frame {
+		margin: 20px;
+		.title {
+		  margin-bottom: 10px;
+		}
+		.inputs {
+		  background: #eee;
+		  padding: 20px 0 10px 0;
+		  border-radius: 10px;
+		}
+	  }
+	}
+  }
+  .rule-wrap {
+	&.active {
+	  display: block;
+	}
+  }
+  .law-wrap {
+	&.active {
+	  display: block;
+	}
+  }
+  .consult-wrap {
+	&.active {
+	  display: block;
+	}
+	.list {
+	  .item {
+		position: relative;
+		border: solid 1px #eee;
+		box-shadow: 1px 2px 8px #ccc;
+		padding: 30px;
+		margin-bottom: 20px;
+		.date {
+		  text-align: center;
+		  margin-bottom: 20px;
+		  font-size: 20px;
+		}
+		.title {
+		  border-bottom: solid 1px #eee;
+		  padding-bottom: 10px;
+		}
+		.group {
+		  border-bottom: solid 1px #eee;
+		  margin-bottom: 20px;
+		}
+		.row {
+		  margin-bottom: 10px;
+		}
+		.row-inline {
+		  display: inline-block;
+		  margin-bottom: 10px;
+		  margin-right: 30px;
+		}
+		.label {
+		  color: #4698f5;
+		  font-weight: bold;;
+		}
+		.imgs {
+		  padding-top: 20px;
+		  img {
+			border: solid 1px #eee;
+			max-width: 400px;
+			margin-right: 10px;
+			margin-bottom: 10px;
+		  }
+		}
+		.incharges {
+		  padding-left: 48px;
+		  .pair {
+			margin-right: 20px;
+			.label {
+			  color: #00c414;
+			}
+		  }
+		}
+		.operation {
+		  position: absolute;
+		  width: 80px;
+		  height: 100%;
+		  right: 0;
+		  top: 0;
+		  background: #d41212;
+		  > div {
+			height: 50%;
+			line-height: 120px;
+			text-align: center;
+			font-size: 20px;
+			cursor: pointer;
+		  }
+		  .edit {
+			background: #ddd;
+			color: #0275d8;
+		  }
+		  .delete {
+			color: #fff;
+		  }
+		}
+	  }
+	}
+	.pagination {
+	  text-align: center;
+	}
+  }
+}

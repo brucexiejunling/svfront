@@ -1,0 +1,75 @@
+.header {
+  @fz: 375/10rem;
+  width: 100%;
+  height: 50/@fz;
+  margin-bottom: 10/@fz;
+  .inner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 11;
+    width: 100%;
+    height: 50/@fz;
+    background: #fff;
+    line-height: 50/@fz;
+    font-size: 20/@fz;
+    text-align: center;
+    border-bottom: solid 1px #eee;
+    box-shadow: 1px 4px 10px #eee;
+    a {
+      width: 60/@fz;
+      height: 100%;
+	  &:active, &:hover {
+		color: rgb(107, 56, 246)!important;
+	  }
+    }
+    .btn {
+	  height: 25/@fz;
+	  line-height: 25/@fz;
+	  margin-top: 12.5/@fz;
+	  border-radius: 4/@fz;
+	  color: #fff;
+	  background-color: #6ce4c7;
+      &:active, &:hover {
+        color: #fff!important;
+      }
+    }
+    .home {
+      background: url('/icons/Home.png');
+      background-repeat: no-repeat;
+      background-size: 30/@fz 30/@fz;
+      background-position: 0% center;
+      &.active {
+        background-image: url('/icons/Home1.png');
+      }
+    }
+    .personal {
+      background-image: url('/icons/Profile.png');
+      background-repeat: no-repeat;
+      background-size: 32/@fz 32/@fz;
+      background-position: 100% center;
+      &.active {
+        background-image: url('/icons/Profile1.png');
+      }
+    }
+    .back {
+      background-image: url('/icons/Back.png');
+      background-size: 30/@fz;
+      background-position: 0 center;
+      background-repeat: no-repeat;
+      &.active {
+        background-image: url('/icons/Back1.png');
+      }
+    }
+    .left-link {
+      float: left;
+      margin-left: 10/@fz;
+      font-size: 14/@fz;
+    }
+    .right-link {
+      float: right;
+      margin-right: 10/@fz;
+      font-size: 14/@fz;
+    }
+  }
+}

@@ -1,0 +1,96 @@
+.select {
+  @fz: 375/10rem;
+  width: 100%;
+  text-align: center;
+  font-size: 14/@fz;
+  padding: 10/@fz;
+  box-sizing: border-box;
+  label {
+	font-size: 14/@fz;
+	width: 90/@fz;
+	height: 35/@fz;
+	line-height: 35/@fz;
+	display: inline-block;
+	vertical-align: middle;
+	text-align: right;
+	span {
+	  display: inline-block;
+	  width: 10/@fz;
+	  height: 10/@fz;
+	  line-height: 16/@fz;
+	  color: #c40000;
+	  font-size: 14/@fz;
+	  vertical-align: middle;
+	}
+  }
+  .select-wrap {
+	display: inline-block;
+	position: relative;
+	padding-right: 25/@fz;
+	width: 190/@fz;
+	height: 35/@fz;
+	vertical-align: middle;
+	.triangle {
+	  position: absolute;
+	  right: 10/@fz;
+	  top: 0;
+	  width: 30/@fz;
+	  height: 100%;
+	  border-left: solid 1px #999;
+	  //> * {
+		//width: 0;
+		//height: 0;
+		//position: absolute;
+		//left: 12/@fz;
+		//border-left: 4/@fz solid transparent;
+		//border-right: 4/@fz solid transparent;
+	  //}
+	  //.bottom {
+		//border-top: 8/@fz solid #444;
+		//top: 18/@fz;
+	  //}
+	  //.top {
+		//border-bottom: 8/@fz solid #444;
+		//top: 7/@fz;
+	  //}
+	}
+	select {
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  width: 205/@fz;
+	  height: 35/@fz;
+	  line-height: 35/@fz;
+	  vertical-align: middle;
+	  padding: 2/@fz 10/@fz;
+	  font-size: 14/@fz;
+	  box-sizing: border-box;
+	  outline: none;
+	  border: solid 1px #999;
+	  border-radius: 4/@fz;
+	  background: transparent;
+	}
+
+	.validate-msg {
+	  display: none;
+	  width: 18/@fz;
+	  height: 18/@fz;
+	  line-height: 18/@fz;
+	  font-size: 14/@fz;
+	  position: absolute;
+	  top: 8/@fz;
+	  right: -15/@fz;
+	  &.invalid {
+		display: inline-block;
+		border-radius: 50%;
+		font-weight: bold;
+		color: #fff;
+		background: #ec0505;
+	  }
+	  &.valid {
+		display: inline-block;
+		color: #00c09b;
+	  }
+	}
+  }
+}

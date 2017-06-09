@@ -1,0 +1,213 @@
+@import "../../common/normalize.less";
+body {
+  background: #f4f4f4;
+}
+.wrap {
+  @fz: 375/10rem;
+  font-size: 16/@fz;
+  padding-bottom: 20/@fz;
+  width: 100%;
+  overflow-x: hidden;
+  color: #444;
+  * {
+    box-sizing: border-box;
+  }
+  .account-wrap {
+    padding: 20/@fz 12/@fz 10/@fz 12/@fz;
+    border-bottom: solid 1px #eee;
+    margin-bottom: 20/@fz;
+    margin-top: -10/@fz;
+    background: #fff;
+    position: relative;
+    &:after {
+      clear: both;
+      display: block;
+      content: ' ';
+      height: 0;
+      overflow: hidden;
+    }
+    .left {
+      width: 80/@fz;
+      float: left;
+      text-align: center;
+      .name {
+        width: 80/@fz;
+        height: 80/@fz;
+        line-height: 80/@fz;
+        border-radius: 50%;
+        background: #6ce4c7;
+        text-align: center;
+        color: #fff;
+        font-size: 16/@fz;
+      }
+      .realname-status {
+        font-size: 14/@fz;
+        padding: 5px;
+        color: #6ce4c7;
+        background-size: 22/@fz;
+        background-repeat: no-repeat;
+        padding-left: 20/@fz;
+        background-position: 4/@fz 2/@fz;
+        &.success {
+          background-image: url('/icons/Star1.png');
+        }
+        &.normal {
+          color: #b4b4b4;
+          background-image: url('/icons/Info.png');
+        }
+        &.identifying {
+          background-image: url('/icons/Info1.png');
+        }
+        &.rejected {
+          color: #b4b4b4;
+          background-image: url('/icons/Alert.png');
+          background-size: 18/@fz;
+          background-position: 4/@fz 4/@fz;
+        }
+      }
+    }
+    .line {
+      float: left;
+      width: 1px;
+      height: 80/@fz;
+      background: #6ce4c7;
+      margin-left: 20/@fz;
+      margin-top: 10/@fz;
+    }
+    > span {
+      float: right;
+      width: 235/@fz;
+    }
+    .right {
+      float: left;
+      //margin-left: 20/@fz;
+      margin-top: 8/@fz;
+      color: #999;
+      font-size: 14/@fz;
+      > div {
+        margin-bottom: 6/@fz;
+        background-size: 20/@fz;
+        background-repeat: no-repeat;
+        background-position: 0 50%;
+        padding-left: 25/@fz;
+      }
+      .gender {
+        &.male {
+          background-image: url('/icons/Man1.png');
+        }
+        &.female {
+          background-image: url('/icons/Woman1.png');
+        }
+      }
+      .age {
+        background-image: url('/icons/Time1.png');
+      }
+      .phone {
+        background-image: url('/icons/iphone1.png');
+      }
+      .address {
+        max-width: 220/@fz;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        background-image: url('/icons/Pin1.png');
+      }
+    }
+    .go-icon {
+      position: absolute;
+      right: 12/@fz;
+      top: 20/@fz;
+      width: 30/@fz;
+      height: 80/@fz;
+      background-image: url('/icons/Compose1.png');
+      background-size: 30/@fz;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+  }
+
+  .rights-wrap {
+    border-top: solid 1px #eee;
+    border-bottom: solid 1px #eee;
+    padding: 0 12/@fz;
+    background: #fff;
+    .title {
+      color: #6ce4c7;
+      font-size: 18/@fz;
+      height: 45/@fz;
+      line-height: 45/@fz;
+      border-bottom: solid 1px #eee;
+    }
+    .rights {
+      color: #999;
+      a {
+        color: #999;
+      }
+      .item {
+        border-bottom: solid 1px #eee;
+        height: 45/@fz;
+        line-height: 45/@fz;
+        font-size: 16/@fz;
+        background-size: 25/@fz;
+        background-repeat: no-repeat;
+        background-position: 0 center;
+        padding-left: 30/@fz;
+        &:last-child {
+          border-bottom: none;
+        }
+        &.home {
+          background-image: url('/icons/Home.png');
+        }
+        &.consult {
+          background-image: url('/icons/Mail.png');
+        }
+        &.signin {
+          background-image: url(/icons/Calendar.png);
+        }
+        &.question {
+          background-image: url('/icons/Papers.png');
+        }
+        &.disaster {
+          background-image: url('/icons/Inbox.png');
+        }
+        a {
+          display: block;
+        }
+        .go-icon {
+          display: inline-block;
+          float: right;
+          width: 30/@fz;
+          height: 45/@fz;
+          background-image: url(/icons/Ahead.png);
+          background-size: 25/@fz;
+          background-repeat: no-repeat;
+          background-position: center center;
+        }
+      }
+    }
+    .unrealname, .rejected, .identifying {
+      padding: 40/@fz 20/@fz;
+      line-height: 24/@fz;
+      color: #999;
+      a {
+        font-size: 18/@fz;
+        color: #159bf3;
+        margin-left: 5/@fz;
+      }
+    }
+  }
+  .logout-btn {
+    width: 80%;
+    height: 40px;
+    background: #bd311b;
+    line-height: 40px;
+    font-size: 18px;
+    text-align: center;
+    margin: auto;
+    margin-top: 50px;
+    a {
+      display: block;
+      color: #fff;
+    }
+  }
+}
