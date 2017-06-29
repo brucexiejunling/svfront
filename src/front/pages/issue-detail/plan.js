@@ -27,7 +27,7 @@ export default class Plan extends Component {
   }
 
   handleUploadImg(imgs) {
-    this.formData.resultImgs = imgs;
+    this.formData.imgs = imgs;
   }
 
   updateStatus(result) {
