@@ -8,10 +8,14 @@ class List extends Component {
   }
   
   render() {
-    let data = this.props.data;
+    const {data, type} = this.props;
     let list = [];
     data.forEach((item, idx) => {
-      list.push(<Card key={idx} data={item} type={this.props.type} mode='write' />);
+      if(item.isMy) {
+        list.push(<Card key={idx} data={item} type={this.props.type} mode='write' deletable={true} />);
+      } else {
+        list.push(<Card key={idx} data={item} type={this.props.type} mode='write' />);
+      }
     });
     return (
       <div className="list">

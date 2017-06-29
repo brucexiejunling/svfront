@@ -84,7 +84,7 @@ class Index extends Component {
       imgEl += `<img src="${img}" />`;
     });
     
-    content = htmlEncode(content);
+    content = this.htmlEncode(content);
 
     let desc = content.substr(0, 50);
     content = `<p>${content}</p><div>${imgEl}</div>`;

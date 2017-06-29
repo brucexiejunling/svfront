@@ -1,10 +1,10 @@
 'use strict';
 import { Component } from 'react';
 import './index.less';
-import Tappable from 'react-tappable';
 import PureRender from '../mixin/pureRender.js';
 import Lazyload from '../lazyload/index.js';
 import { toast } from '../utils/toast';
+import Tappable from 'react-tappable';
 import reqwest from 'reqwest';
 import config from '../config';
 
@@ -22,7 +22,7 @@ class Card extends Component {
     if (this.state.isTop) {
       reqwest({
         url: `${config.hostname}/api/article/save`,
-        method: 'get',
+        method: 'post',
         type: 'jsonp',
         data: {
           id: this.props.data._id,
@@ -43,7 +43,7 @@ class Card extends Component {
     } else {
       reqwest({
         url: `${config.hostname}/api/article/top`,
-        method: 'get',
+        method: 'post',
         type: 'jsonp',
         data: {
           id: this.props.data._id,
@@ -68,13 +68,14 @@ class Card extends Component {
     if (confirm('确认删除该文章吗？')) {
       reqwest({
         url: `${config.hostname}/api/article/remove`,
-        method: 'get',
+        method: 'post',
         type: 'jsonp',
         data: { id: this.props.data._id }
       })
         .then(res => {
           if (res.code === 0 && res.data) {
             toast('删除成功!');
+            setTimeout(()=> location.reload(), 2000);
           } else {
             toast(res.message);
           }

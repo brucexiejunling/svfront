@@ -54,5 +54,38 @@
       }
 
     }
+    .handle-results {
+      border: solid 1px #eee;
+      border-radius: 4px;
+      padding: 20/@fz 10/@fz;
+      .title {
+        text-align: center;
+        margin-bottom: 15/@fz;
+      }
+      .list {
+        .item {
+          padding-bottom: 10/@fz;
+          border-bottom: solid 1px #eee;
+          margin-bottom: 10/@fz;
+          &:last-child {
+            border: none;
+            margin-bottom: 0;
+          }
+          .name {
+            font-weight: bold;
+            font-size: 16/@fz;
+            margin-bottom: 5/@fz;
+          }
+          .result {
+            margin-bottom: 5/@fz;
+          }
+          .result-img {
+            img {
+              max-width: 100%;
+            }
+          }
+        }
+      }
+    }
   }
 }

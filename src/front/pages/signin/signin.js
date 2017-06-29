@@ -70,6 +70,7 @@ class Signin extends Component {
 
   initLocation() {
     Location.getLocation(position => {
+      position.streetNumber = position.streetNumber || position.street_number;
       const str = `${position.province} ${position.city} ${position.district} ${position.street} ${position.streetNumber}`;
       window.localStorage && window.localStorage.setItem('location', str);
       this.setState({ position });

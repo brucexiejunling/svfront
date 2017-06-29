@@ -59,7 +59,13 @@ class Index extends Component {
   }
 
   handleInput(val) {
-    this.state.comment = val.value;
+    this.state.comment = this.htmlEncode(val.value);
+  }
+
+  htmlEncode(str) {
+    let div = document.createElement('div');
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
   }
 
   handleComment() {

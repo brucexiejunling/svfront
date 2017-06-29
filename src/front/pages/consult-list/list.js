@@ -11,7 +11,7 @@ class List extends Component {
     let data = this.props.data;
     let list = [];
     data.forEach((item, idx) => {
-      list.push(<Card key={idx} data={item} type="consult" mode='read' />);
+      list.push(<Card key={idx} data={item} type="consult" mode='read' deletable={true} />);
     });
     return (
       <div className="list">

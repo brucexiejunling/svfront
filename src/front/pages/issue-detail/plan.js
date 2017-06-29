@@ -107,6 +107,24 @@ export default class Plan extends Component {
       return item.name;
     });
 
+    let handleResults = [];
+    if (data.handlers && data.handlers.length > 0) {
+      data.handlers.forEach((item, idx) => {
+        let resultImgEls = [];
+        if (item.imgs && item.imgs.length > 0) {
+          item.imgs.forEach((url, idx) => {
+            resultImgEls.push(<img src={url} alt="" />);
+          });
+        }
+        handleResults.push(
+          <div className="item">
+            <div className="name">{item.user.name}</div>
+            <div className="result">{item.result}</div>
+            <div className="result-img">{resultImgEls}</div>
+          </div>
+        );
+      });
+    }
     return (
       <div class="issue-detail">
         <div className="display-wrap">
@@ -123,85 +141,86 @@ export default class Plan extends Component {
           <div className="content">
             <span className="label">计划详情：</span><span>{data.content}</span>
           </div>
-          {imgEls.length > 0
-            ? <div className="imgs">
-                <span className="label">相关图片：</span>
-                <div className="imgs-wrap">
-                  {imgEls}
-                </div>
+          {imgEls.length > 0 &&
+            <div className="imgs">
+              <span className="label">相关图片：</span>
+              <div className="imgs-wrap">
+                {imgEls}
               </div>
-            : null}
+            </div>}
           <div className="date">
             <span className="label">计划日期：</span>
             <span>{data.startDate} 至 {data.endDate}</span>
           </div>
           <div className="child">
-            {statusTxts[data.status]
-              ? <div className="status">
-                  <span className="label">处理状态：</span>
-                  <span>{statusTxts[data.status]}</span>
-                </div>
-              : null}
-            {data.result
-              ? <div className="result">
-                  <span className="label">计划总结：</span>{data.result}
-                </div>
-              : null}
-            {resultImgEls.length > 0
-              ? <div className="imgs">
-                  <span className="label">结果图片：</span>
-                  <div className="imgs-wrap">
-                    {resultImgEls}
-                  </div>
-                </div>
-              : null}
-          </div>
-          {data.isMy
-            ? <div className="child">
-                <div className="receiver">
-                  <span className="label">接收人：</span><span>{receiver}</span>
-                </div>
-                <div className="handlers">
-                  <span className="label">已处理人员：</span>
-                  <span>{handlers.length > 0 ? handlers.join('、') : '暂无'}</span>
-                </div>
-                <div className="unhandlers">
-                  <span className="label">未处理人员：</span>
-                  <span>
-                    {unhandlers.length > 0 ? unhandlers.join('、') : '无'}
-                  </span>
-                </div>
-              </div>
-            : null}
-        </div>
-        {this.props.mode === 'write'
-          ? <div className="deal-wrap">
+            {statusTxts[data.status] &&
               <div className="status">
-                <Select
-                  data={statusOpts}
-                  label="更新状态"
-                  id="status"
-                  value="statusTxt"
-                  required={false}
-                  onChange={this.updateStatus}
-                />
+                <span className="label">处理状态：</span>
+                <span>{statusTxts[data.status]}</span>
+              </div>}
+            {data.result &&
+              <div className="result">
+                <span className="label">计划总结：</span>{data.result}
+              </div>}
+            {resultImgEls.length > 0 &&
+              <div className="imgs">
+                <span className="label">结果图片：</span>
+                <div className="imgs-wrap">
+                  {resultImgEls}
+                </div>
+              </div>}
+          </div>
+          {data.isMy &&
+            <div className="child">
+              <div className="receiver">
+                <span className="label">接收人：</span><span>{receiver}</span>
               </div>
-              <div className="comment">
-                <Textarea
-                  label="计划总结"
-                  placeholder="输入对于此次计划的总结..."
-                  required={true}
-                  onChange={this.setResult}
-                />
+              <div className="unhandlers">
+                <span className="label">未处理人员：</span>
+                <span>
+                  {unhandlers.length > 0 ? unhandlers.join('、') : '无'}
+                </span>
               </div>
-              <div className="pic">
-                <UploadImg onChange={this.handleUploadImg} />
+              <div className="handlers">
+                <span className="label">已处理人员：</span>
+                <span>{handlers.length > 0 ? handlers.join('、') : '暂无'}</span>
               </div>
-              <div className="submit">
-                <button onClick={this.handleSubmit}>保存</button>
-              </div>
+              {handlers.length > 0 &&
+                <div className="handle-results">
+                  <div className="title">各人员处理结果</div>
+                  <div className="list">
+                    {handleResults}
+                  </div>
+                </div>}
+            </div>}
+        </div>
+        {this.props.mode === 'write' &&
+          <div className="deal-wrap">
+            <div className="status">
+              <Select
+                data={statusOpts}
+                label="更新状态"
+                id="status"
+                value="statusTxt"
+                required={false}
+                onChange={this.updateStatus}
+              />
             </div>
-          : null}
+            <div className="comment">
+              <Textarea
+                label="计划总结"
+                placeholder="输入对于此次计划的总结..."
+                required={true}
+                onChange={this.setResult}
+              />
+            </div>
+            <div className="pic">
+              <UploadImg onChange={this.handleUploadImg} />
+            </div>
+            <div className="submit">
+              <button onClick={this.handleSubmit}>保存</button>
+            </div>
+          </div>}
       </div>
     );
   }
